@@ -836,12 +836,66 @@ a {
 
 .instructors {
     padding: 90px 0;
+    background: transparent;
+    color: inherit;
+}
+
+.section-title--light {
+    color: #333;
+    font-weight: 700;
+}
+
+.section-title--light::after {
+    display: none;
+}
+
+.instructor-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: visible;
+}
+
+.carousel-arrow {
+    display: none;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.6;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.carousel-arrow--left {
+    left: -70px;
+    border-width: 13px 16px 13px 0;
+    border-color: transparent #bfbfbf transparent transparent;
+}
+
+.carousel-arrow--right {
+    right: -70px;
+    border-width: 13px 0 13px 16px;
+    border-color: transparent transparent transparent #bfbfbf;
+}
+
+.instructor-viewport {
+    width: 100%;
+    overflow: hidden;
 }
 
 .instructor-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 56px;
+    width: 100%;
+    flex: 1;
+    max-width: 1080px;
+    transition: transform 0.3s ease;
 }
 
 .instructor-grid .instructor-card {
@@ -853,96 +907,162 @@ a {
 }
 
 .instructor-card {
-    background: #fff;
-    border-radius: 18px;
-    padding: 24px;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    background: #0a0a0a;
+    border: 2px solid #d85f45;
+    border-radius: 2px;
+    overflow: hidden;
 }
 
-.instructor-header {
+.instructor-card__header {
+    background: linear-gradient(90deg, #c4573b 0%, #ef6b56 100%);
+    padding: 26px 28px;
     display: flex;
-    gap: 16px;
     align-items: center;
-    margin-bottom: 20px;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.instructor-name h3 {
+    margin: 0;
+    font-size: 24px;
+    letter-spacing: 0.5px;
+}
+
+.instructor-name span {
+    display: block;
+    margin-top: 4px;
+    font-size: 14px;
+    letter-spacing: 1px;
 }
 
 .avatar {
-    width: 90px;
-    height: 90px;
+    width: 92px;
+    height: 92px;
     border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
+    border: 2px solid rgba(255, 255, 255, 0.4);
 }
 
-.instructor-header h3 {
-    margin: 0;
-    font-size: 20px;
+.instructor-card__body {
+    padding: 22px 26px 30px;
+    color: #222;
+    background: #fff;
 }
 
-.instructor-header span {
-    color: #666;
-    font-size: 14px;
+.instructor-section {
+    margin-bottom: 18px;
 }
 
 .instructor-section h4 {
-    margin: 18px 0 8px;
+    margin: 0 0 8px;
     font-size: 16px;
+    color: #222;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.instructor-section h4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.25);
 }
 
 .instructor-section ul {
     margin: 0;
-    padding-left: 20px;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 8px;
+}
+
+.instructor-section ul li {
+    position: relative;
+    padding-left: 18px;
+    line-height: 1.7;
+}
+
+.instructor-section ul li::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #333;
+    position: absolute;
+    left: 0;
+    top: 8px;
+}
+
+.instructor-section p {
+    margin: 0;
+    line-height: 1.7;
 }
 
 .pricing {
-    padding: 90px 0;
-    background: var(--color-light);
+  padding: 90px 0;
+  background: #fff;
 }
 
 .price-summary {
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
-    margin-bottom: 12px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: nowrap;
+  margin-bottom: 14px;
+  border: 3px solid #e06549;
+  border-radius: 10px;
+  padding: 18px 24px;
+  width: min(920px, 100%);
+  margin-inline: auto;
 }
 
 .price-label {
-    font-weight: 700;
-    font-size: 20px;
+  font-weight: 700;
+  font-size: 20px;
+  background: #e06549;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 6px;
+  letter-spacing: 1px;
 }
 
 .price-value {
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-    font-size: 28px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 28px;
+  color: #e06549;
 }
 
 .price-value strong {
-    font-size: 46px;
+  font-size: 52px;
 }
 
 .price-wave {
-    font-size: 30px;
+  font-size: 38px;
+  font-weight: 700;
 }
 
 .price-tax {
-    font-size: 16px;
-    color: #666;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .price-note {
-    text-align: center;
-    margin-bottom: 32px;
-    font-size: 14px;
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 14px;
+  color: #666;
 }
 
 .pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
 .pricing-grid .price-card {
@@ -958,18 +1078,70 @@ a {
 }
 
 .price-card {
-    background: #fff;
-    border-radius: 16px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-    display: grid;
-    gap: 8px;
+  background: #fff;
+  border: 2px solid #e06549;
+  border-radius: 0;
+  padding: 28px 26px;
+  text-align: center;
+  box-shadow: none;
+  display: grid;
+  gap: 12px;
 }
 
-.price-card h3 {
-    margin: 0;
-    font-size: 20px;
+.price-plan {
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #e06549;
+}
+
+.price-course {
+  margin: 0;
+  font-size: 24px;
+  color: #e06549;
+  font-weight: 700;
+}
+
+.price-divider {
+  display: block;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.2);
+  margin: 8px auto 0;
+  width: 70%;
+}
+
+.price-meta {
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  text-align: left;
+}
+
+.price-meta__item {
+  position: relative;
+  padding-left: 34px;
+  color: #333;
+  font-weight: 700;
+}
+
+.price-meta__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 24px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.price-meta__item--term::before {
+  background-image: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='24' viewBox='0 0 32 24' fill='none' stroke='%23666' stroke-width='2'><path d='M2 6h28v14H2z'/><path d='M2 6h8l2 2h18'/><path d='M12 6v14'/></svg>\");
+}
+
+.price-meta__item--support::before {
+  background-image: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='24' viewBox='0 0 32 24' fill='none' stroke='%23666' stroke-width='2'><path d='M5 12l5 5 8-8'/><path d='M18 7l9 9'/><path d='M21 7l6 6'/></svg>\");
 }
 
 .journey {
@@ -1249,6 +1421,33 @@ a {
     .hero {
         background-position: center;
         background-size: cover;
+    }
+
+    .instructor-carousel {
+        padding: 0;
+    }
+
+    .instructor-grid {
+        display: flex;
+        gap: 0;
+        max-width: 100%;
+        overflow: visible;
+    }
+
+    .instructor-card {
+        flex: 0 0 100%;
+    }
+
+    .carousel-arrow {
+        display: block;
+    }
+
+    .carousel-arrow--left {
+        left: -28px;
+    }
+
+    .carousel-arrow--right {
+        right: -28px;
     }
     .course-heading {
         align-items: center;
