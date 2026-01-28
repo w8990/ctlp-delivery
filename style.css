@@ -1267,10 +1267,16 @@ a {
     padding: 90px 0;
 }
 
+.flow .section-title::after {
+    display: none;
+}
+
 .flow-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .flow-grid .flow-card {
@@ -1286,18 +1292,56 @@ a {
 }
 
 .flow-card {
+    position: relative;
     background: #fff;
-    border-radius: 16px;
-    padding: 22px;
+    border: 2px solid #d85f45;
+    border-radius: 12px;
+    padding: 50px 24px 32px;
     text-align: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+    box-shadow: none;
 }
 
 .flow-num {
-    font-size: 32px;
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 48px;
+    height: 48px;
+    background: #d85f45;
+    color: #fff;
+    font-size: 22px;
     font-weight: 700;
-    display: inline-block;
-    margin-bottom: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flow-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+.flow-card h3 {
+    margin: 0 0 16px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+}
+
+.flow-card p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #666;
+}
+
+.flow-link {
+    color: #d85f45;
+    text-decoration: underline;
 }
 
 .faq {
