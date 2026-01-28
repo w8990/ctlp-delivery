@@ -1117,26 +1117,25 @@ a {
 }
 
 .price-meta {
-    margin: 8px 0 0;
+    margin: 8px auto 0;
     padding: 0;
     list-style: none;
     display: grid;
     gap: 10px;
-    text-align: left;
+    width: fit-content;
 }
 
 .price-meta__item {
-    position: relative;
-    padding-left: 34px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     color: #333;
     font-weight: 700;
 }
 
 .price-meta__item::before {
     content: "";
-    position: absolute;
-    left: 0;
-    top: 4px;
+    flex-shrink: 0;
     width: 24px;
     height: 18px;
     background-size: 100% 100%;
