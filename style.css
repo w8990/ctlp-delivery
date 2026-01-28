@@ -1002,72 +1002,72 @@ a {
 }
 
 .pricing {
-  padding: 90px 0;
-  background: #fff;
+    padding: 90px 0;
+    background: #fff;
 }
 
 .pricing .section-title::after {
-  display: none;
+    display: none;
 }
 
 .price-summary {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: 24px;
-  flex-wrap: nowrap;
-  margin-bottom: 14px;
-  border: 3px solid #e06549;
-  border-radius: 10px;
-  padding: 18px 24px;
-  width: min(920px, 100%);
-  margin-inline: auto;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: nowrap;
+    margin-bottom: 14px;
+    border: 3px solid #e06549;
+    border-radius: 10px;
+    padding: 18px 24px;
+    width: min(920px, 100%);
+    margin-inline: auto;
 }
 
 .price-label {
-  font-weight: 700;
-  font-size: 20px;
-  background: #e06549;
-  color: #fff;
-  padding: 10px 24px;
-  border-radius: 6px;
-  letter-spacing: 1px;
-  text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    background: #e06549;
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 6px;
+    letter-spacing: 1px;
+    text-align: center;
 }
 
 .price-value {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-  font-size: 28px;
-  color: #e06549;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    font-size: 28px;
+    color: #e06549;
 }
 
 .price-value strong {
-  font-size: 52px;
+    font-size: 52px;
 }
 
 .price-wave {
-  font-size: 38px;
-  font-weight: 700;
+    font-size: 38px;
+    font-weight: 700;
 }
 
 .price-tax {
-  font-size: 20px;
-  font-weight: 700;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .price-note {
-  text-align: center;
-  margin-bottom: 32px;
-  font-size: 14px;
-  color: #666;
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 14px;
+    color: #666;
 }
 
 .pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
 }
 
 .pricing-grid .price-card {
@@ -1083,72 +1083,72 @@ a {
 }
 
 .price-card {
-  background: #fff;
-  border: none;
-  border-right: 4px solid #e06549;
-  border-bottom: 4px solid #e06549;
-  border-radius: 0;
-  padding: 28px 26px;
-  text-align: center;
-  box-shadow: none;
-  display: grid;
-  gap: 12px;
+    background: #fff;
+    border: none;
+    border-right: 4px solid #e06549;
+    border-bottom: 4px solid #e06549;
+    border-radius: 0;
+    padding: 28px 26px;
+    text-align: center;
+    box-shadow: none;
+    display: grid;
+    gap: 12px;
 }
 
 .price-plan {
-  font-size: 16px;
-  letter-spacing: 1px;
-  color: #e06549;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #e06549;
 }
 
 .price-course {
-  margin: 0;
-  font-size: 24px;
-  color: #e06549;
-  font-weight: 700;
+    margin: 0;
+    font-size: 24px;
+    color: #e06549;
+    font-weight: 700;
 }
 
 .price-divider {
-  display: block;
-  height: 1px;
-  background: rgba(0, 0, 0, 0.2);
-  margin: 8px auto 0;
-  width: 70%;
+    display: block;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.2);
+    margin: 8px auto 0;
+    width: 70%;
 }
 
 .price-meta {
-  margin: 8px 0 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  gap: 10px;
-  text-align: left;
+    margin: 8px 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 10px;
+    text-align: left;
 }
 
 .price-meta__item {
-  position: relative;
-  padding-left: 34px;
-  color: #333;
-  font-weight: 700;
+    position: relative;
+    padding-left: 34px;
+    color: #333;
+    font-weight: 700;
 }
 
 .price-meta__item::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 4px;
-  width: 24px;
-  height: 18px;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 24px;
+    height: 18px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .price-meta__item--term::before {
-  background-image: url("assets/price-term.svg");
+    background-image: url("assets/price-term.svg");
 }
 
 .price-meta__item--support::before {
-  background-image: url("assets/price-support.svg");
+    background-image: url("assets/price-support.svg");
 }
 
 .journey {
@@ -1346,7 +1346,6 @@ a {
 
 .faq {
     padding: 90px 0;
-    background: #fff;
 }
 
 .faq .section-title::after {
@@ -1457,7 +1456,7 @@ a {
 
 .footer-links {
     display: flex;
-    gap: 40px;
+    gap: 20px;
     font-size: 14px;
 }
 
@@ -1544,79 +1543,62 @@ a {
 
 @media (max-width: 768px) {
     .header-inner {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
     }
     .nav {
-        width: 100%;
-        justify-content: flex-start;
-        gap: 14px;
-        font-size: 14px;
+        display: none;
     }
     .hero {
         background-position: center;
         background-size: cover;
     }
-
     .journey-watermark {
         display: none;
     }
-
     .journey-step {
         grid-template-columns: 1fr;
     }
-
     .step-card {
         grid-template-columns: 1fr;
     }
-
     .step-index {
         margin-bottom: -6px;
     }
-
     .journey-step::after {
         left: 50%;
     }
-
     .price-summary {
         flex-wrap: wrap;
         gap: 12px;
         justify-content: center;
         padding: 16px;
     }
-
     .price-label {
         width: 100%;
         text-align: center;
     }
-
     .price-value {
         justify-content: center;
     }
-
     .instructor-carousel {
         padding: 0;
     }
-
     .instructor-grid {
         display: flex;
         gap: 0;
         max-width: 100%;
         overflow: visible;
     }
-
     .instructor-card {
         flex: 0 0 100%;
     }
-
     .carousel-arrow {
         display: block;
     }
-
     .carousel-arrow--left {
         left: -28px;
     }
-
     .carousel-arrow--right {
         right: -28px;
     }
@@ -1630,12 +1612,32 @@ a {
     .course-text {
         transform: none;
     }
+    .course-image {
+        width: 100%;
+    }
+    .course-image img {
+        width: 100%;
+        max-width: none;
+        height: auto;
+    }
     .hero-inner {
         margin: 0;
     }
     .watermark,
     .journey-watermark {
         display: none;
+    }
+    .site-footer {
+        padding: 32px 0;
+        background: var(--color-dark);
+    }
+    .footer-links {
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+    .footer-links a {
+        white-space: nowrap;
     }
 }
 
