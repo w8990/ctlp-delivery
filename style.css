@@ -226,13 +226,13 @@ a {
 .hero-bubble::before {
   content: "";
   position: absolute;
-  right: 36px;
-  top: -12px;
-  width: 8px;
-  height: 8px;
-  background: #e56b4f;
-  border-radius: 50%;
-  box-shadow: -16px 8px 0 #d85f45;
+  left: 62%;
+  top: -16px;
+  width: 48px;
+  height: 16px;
+  background:
+    radial-gradient(circle 5px at 12px 8px, #e56b4f 99%, transparent 100%),
+    radial-gradient(circle 5px at 34px 8px, #e56b4f 99%, transparent 100%);
 }
 
 .hero-title {
