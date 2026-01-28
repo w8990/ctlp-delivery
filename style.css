@@ -1006,6 +1006,10 @@ a {
   background: #fff;
 }
 
+.pricing .section-title::after {
+  display: none;
+}
+
 .price-summary {
   display: flex;
   align-items: baseline;
@@ -1028,6 +1032,7 @@ a {
   padding: 10px 24px;
   border-radius: 6px;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 .price-value {
@@ -1079,7 +1084,9 @@ a {
 
 .price-card {
   background: #fff;
-  border: 2px solid #e06549;
+  border: none;
+  border-right: 4px solid #e06549;
+  border-bottom: 4px solid #e06549;
   border-radius: 0;
   padding: 28px 26px;
   text-align: center;
@@ -1129,19 +1136,19 @@ a {
   content: "";
   position: absolute;
   left: 0;
-  top: 2px;
+  top: 4px;
   width: 24px;
-  height: 20px;
-  background-size: contain;
+  height: 18px;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
 .price-meta__item--term::before {
-  background-image: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='24' viewBox='0 0 32 24' fill='none' stroke='%23666' stroke-width='2'><path d='M2 6h28v14H2z'/><path d='M2 6h8l2 2h18'/><path d='M12 6v14'/></svg>\");
+  background-image: url("assets/price-term.svg");
 }
 
 .price-meta__item--support::before {
-  background-image: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='24' viewBox='0 0 32 24' fill='none' stroke='%23666' stroke-width='2'><path d='M5 12l5 5 8-8'/><path d='M18 7l9 9'/><path d='M21 7l6 6'/></svg>\");
+  background-image: url("assets/price-support.svg");
 }
 
 .journey {
@@ -1421,6 +1428,22 @@ a {
     .hero {
         background-position: center;
         background-size: cover;
+    }
+
+    .price-summary {
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+        padding: 16px;
+    }
+
+    .price-label {
+        width: 100%;
+        text-align: center;
+    }
+
+    .price-value {
+        justify-content: center;
     }
 
     .instructor-carousel {
