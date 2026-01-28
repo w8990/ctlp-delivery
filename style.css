@@ -748,9 +748,15 @@ a {
 }
 
 .support {
-    padding: 90px 0;
-    background: var(--gradient-accent);
+    padding: 186px 0;
+    background: url("assets/support-bg.png") center/cover no-repeat;
     color: #fff;
+}
+
+@media (max-width: 768px) {
+    .support {
+        background: var(--gradient-accent);
+    }
 }
 
 .support h2 {
@@ -763,10 +769,19 @@ a {
     display: grid;
     gap: 24px;
     grid-template-columns: repeat(3, 1fr);
+    align-items: start;
 }
 
 .support-grid .support-card {
     animation: fade-up 0.8s ease both;
+}
+
+.support-grid .support-card:nth-child(2) {
+    transform: translateY(18px);
+}
+
+.support-grid .support-card:nth-child(3) {
+    transform: translateY(36px);
 }
 
 .support-grid .support-card:nth-child(2) {
@@ -779,11 +794,19 @@ a {
 
 .support-card {
     position: relative;
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: transparent;
+    border: none;
     border-radius: 18px;
     padding: 20px;
     overflow: hidden;
+}
+
+.support-card:nth-child(2) {
+    margin-top: 32px;
+}
+
+.support-card:nth-child(3) {
+    margin-top: 64px;
 }
 
 .support-card img {
@@ -796,10 +819,14 @@ a {
 
 .support-number {
     position: absolute;
-    top: 18px;
-    left: 18px;
-    font-size: 28px;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
     font-weight: 700;
+    background: #d85f45;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 12px 0 12px 0;
 }
 
 .support-card h3 {
@@ -1198,6 +1225,10 @@ a {
     .pricing-grid,
     .flow-grid {
         grid-template-columns: 1fr;
+    }
+    .support-grid .support-card:nth-child(2),
+    .support-grid .support-card:nth-child(3) {
+        margin-top: 0;
     }
     .journey-steps li {
         grid-template-columns: 60px 1fr;
