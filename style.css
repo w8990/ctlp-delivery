@@ -569,21 +569,53 @@ a {
     font-weight: 700;
 }
 
+.consult-line {
+    display: block;
+    margin: 8px auto 12px;
+}
+
 .consult-action {
     display: flex;
-    gap: 18px;
+    flex-direction: column;
+    gap: 10px;
     align-items: center;
-    flex-wrap: wrap;
     justify-content: center;
+}
+
+.consult-action .cta-pill {
+    padding: 8px 22px;
+    font-size: 16px;
+    background: linear-gradient(180deg, #f4ede0 0%, #e8decd 100%);
+    color: #333;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    position: relative;
+    z-index: 2;
+    transform: translateY(14px);
+}
+
+.consult-action .btn {
+    padding: 18px 44px;
+    min-width: 420px;
+    border-radius: 12px;
+    font-size: 22px;
+    box-shadow: 0 14px 24px rgba(191, 82, 49, 0.25);
+    margin-top: -6px;
 }
 
 .reasons {
     padding: 90px 0;
 }
 
+.reasons .section-title::after {
+    width: 2px;
+    height: 60px;
+    margin: 24px auto 0;
+}
+
 .reasons-list {
     display: grid;
-    gap: 28px;
+    gap: 40px;
 }
 
 .reasons-list .reason-card {
@@ -600,48 +632,89 @@ a {
 
 .reason-card {
     display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 24px;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
     background: var(--gradient-sand);
-    padding: 28px;
     border-radius: 20px;
+    overflow: hidden;
 }
 
 .reason-card--reverse {
-    grid-template-columns: 1fr 280px;
+    grid-template-columns: 1fr 1fr;
 }
 
 .reason-card--reverse .reason-image {
     order: 2;
 }
 
+.reason-card--reverse .reason-body {
+    order: 1;
+}
+
+.reason-image {
+    position: relative;
+    padding: 32px;
+}
+
 .reason-image img {
-    border-radius: 16px;
-    height: 100%;
+    border-radius: 0;
+    width: 100%;
+    height: auto;
     object-fit: cover;
 }
 
 .reason-meta {
+    position: absolute;
+    top: 24px;
+    left: 24px;
     display: flex;
-    align-items: baseline;
-    gap: 12px;
-    margin-bottom: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.reason-card--reverse .reason-meta {
+    left: auto;
+    right: 24px;
+    align-items: flex-end;
 }
 
 .reason-num {
-    font-size: 36px;
-    font-weight: 700;
+    font-family: var(--font-display);
+    font-size: 48px;
+    font-weight: 300;
+    font-style: italic;
+    color: #d4a59a;
+    line-height: 1;
 }
 
 .reason-label {
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-family: var(--font-display);
+    font-size: 36px;
+    font-weight: 300;
+    font-style: italic;
+    color: #d4a59a;
+    line-height: 1.2;
+}
+
+.reason-body {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .reason-body h3 {
-    margin: 0 0 12px;
-    font-size: 22px;
+    margin: 0 0 16px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.reason-body p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
 }
 
 .support {
@@ -1115,7 +1188,8 @@ a {
     .cta-pill {
         text-align: center;
     }
-    .cta-strip .btn {
+    .cta-strip .btn,
+    .consult-action .btn {
         min-width: 100%;
         font-size: 18px;
     }
